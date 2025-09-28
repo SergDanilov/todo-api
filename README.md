@@ -23,6 +23,25 @@ composer install
 touch database/database.sqlite
 ```
 
+3.1 Создайте основной файл окружения из примера (если его нет в корне проекта)
+
+```bash
+cp .env.example .env
+```
+
+3.2 Сгенерируйте ключ APP_KEY
+
+```bash
+php artisan key:generate
+```
+
+3.3 В файле .env установите соединение с вашей базой данных:
+
+```bash
+DB_CONNECTION=sqlite
+DB_DATABASE=/database/database.sqlite
+```
+
 4. Запустите миграции и сидеры:
 
 ```bash
